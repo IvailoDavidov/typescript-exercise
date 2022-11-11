@@ -1,3 +1,5 @@
+import { SpaceLocation } from "./SpaceLocation";
+
 // Part 1: Declare (5) Variables With Type
 let spacecraftName: string = 'Determination';
 let speedMph: number = 17500;
@@ -40,6 +42,10 @@ class Spacecraft {
 
         return daysToDestination;
     }
+
+    public printDaysToLocation(location: SpaceLocation){
+        console.log(`${this.name} would take ${this.getDaysToLocation(location.kilometersAway)} days to get to ${location.name}.`);
+    }
 }
 
 // Create an instance of the class here:
@@ -49,8 +55,6 @@ let spaceShuttle = new Spacecraft('Determination', 17500)
 // Move your output statements from part 3 here. Update the template literals use the
 // instance of the class.
 
-console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToMars)} days to get to Mars.`);
-console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(kilometersToTheMoon)}  days to get to the Moon.`);
 
 // Part 5: Export and Import the SpaceLocation Class
 // Add the required import statement BEFORE the part 1 content.
@@ -59,7 +63,8 @@ console.log(`${spaceShuttle.name} would take ${spaceShuttle.getDaysToLocation(ki
 // Add the printDaysToLocation function to the Spacecraft class.
 
 // Use the class instance to print out the days to Mars and the Moon here:
-
+spaceShuttle.printDaysToLocation(new SpaceLocation('Mars', kilometersToMars));
+spaceShuttle.printDaysToLocation(new SpaceLocation('the Moon', kilometersToTheMoon));
 /*
 spaceShuttle.printDaysToLocation(new SpaceLocation('Mars', kilometersToMars));
 spaceShuttle.printDaysToLocation(new SpaceLocation('the Moon', kilometersToTheMoon));
