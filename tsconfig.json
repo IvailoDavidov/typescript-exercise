@@ -2,7 +2,7 @@
     "include": ["./src/**/*"],
     "exclude": ["node_modules"],
     "compilerOptions": {
-        "target": "ESNext",
+        "target": "ES6",
         "allowJs": true,
         "checkJs": true,
         "outDir": "build",
