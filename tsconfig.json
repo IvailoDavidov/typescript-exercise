@@ -7,7 +7,7 @@
         "checkJs": true,
         "outDir": "build",
         "moduleResolution": "node",
-        "module": "ES6",
+        "module": "CommonJS",
         "sourceMap": true
     }
 }
